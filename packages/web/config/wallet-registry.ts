@@ -285,4 +285,12 @@ export const WalletRegistry: RegistryWallet[] = [
     },
     features: [],
   },
+  {
+    ...CosmosKitWalletList["tailwind-extension"],
+    logo: "/wallets/tailwind.svg",
+    lazyInstall: () =>
+      import("@tailwindzone/cosmoskit").then((m) => m.TailwindExtensionWallet),
+    windowPropertyName: "tailwind",
+    features: [],
+  },
 ];
